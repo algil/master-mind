@@ -11,13 +11,13 @@ public class Round {
     public static final int NUM_HOLES_ROUND = 4;
 
     private Integer id;
-    private List<CodePeg> codePegs;
+    private List<Ball> balls;
     private List<KeyPeg> result;
     private RoundState roundState;
 
     public Round() {
         this.id = null;
-        this.codePegs = new ArrayList<>();
+        this.balls = new ArrayList<>();
         this.result = new ArrayList<>();
         this.roundState = RoundState.Empty;
     }
@@ -30,15 +30,15 @@ public class Round {
         return this.id;
     }
 
-    public void addCodePage(CodePeg codePeg) {
+    public void addCodePage(Ball ball) {
         if (isRoundStateFull()) {
             //TODO: Throw Exception to show a message?
 
         }
 
-        this.codePegs.add(codePeg);
+        this.balls.add(ball);
 
-        if (this.codePegs.size() == NUM_HOLES_ROUND) {
+        if (this.balls.size() == NUM_HOLES_ROUND) {
             this.roundState = RoundState.Full;
         }
     }

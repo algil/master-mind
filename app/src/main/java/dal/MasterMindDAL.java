@@ -7,7 +7,9 @@ import java.util.List;
 
 import api.IMasterMindDAL;
 import dao.MasterMindDAO;
+import domain.Game;
 import domain.PlayerRecord;
+import domain.Round;
 
 /**
  * Created by LENOVO on 04/01/2016.
@@ -41,4 +43,28 @@ public class MasterMindDAL implements IMasterMindDAL {
             throw ex;
         }
     }
+
+    public Game verifyRightCombinationLastRoundGame(Game actualGame) {
+        Round lastRoundGame = null;
+
+        if (actualGame != null
+                && actualGame.getRounds() != null) {
+            lastRoundGame = actualGame.getRounds().get(actualGame.getRounds().size() -1);
+
+
+        }
+
+        return actualGame;
+    }
+
+    public Game generateNewGame() {
+        Game game = new Game();
+        for (int i = 0;i<4;i++) {
+
+        }
+
+        return game;
+    }
+
+
 }

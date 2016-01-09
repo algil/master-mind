@@ -7,6 +7,7 @@ import java.util.List;
  */
 public class Game {
     private List<Round> rounds;
+    private List<Ball> rightCombination;
 
     public Game() {
         this.rounds = null;
@@ -18,5 +19,13 @@ public class Game {
 
     public List<Round> getRounds() {
         return this.rounds;
+    }
+
+    public void setRightCombination(List<Ball> rightCombination) {
+        this.rightCombination = rightCombination;
+    }
+
+    public List<Ball> getRightCombination() {
+        return this.rightCombination;
     }
 }
