@@ -16,7 +16,7 @@ public final class DateUtils {
 
         try {
             if (date != null) {
-                dateFormatter = new SimpleDateFormat("YYYY-MM-DD HH:MM:SS.SSS");
+                dateFormatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
                 convertedDate = dateFormatter.format(date);
             }
         } catch(Exception ex) {
@@ -33,7 +33,7 @@ public final class DateUtils {
 
         try {
             if (stringDateFormat != null) {
-                dateFormatter = new SimpleDateFormat("YYYY-MM-DD HH:MM:SS.SSS");
+                dateFormatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
                 convertDate = dateFormatter.parse(stringDateFormat);
             }
         } catch(Exception ex) {

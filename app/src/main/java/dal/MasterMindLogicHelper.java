@@ -15,7 +15,7 @@ import domain.Round;
  */
 public final class MasterMindLogicHelper {
 
-    public static Game verifyRightCombinationLastRoundGame(Game actualGame) {
+    /*public static Game verifyRightCombinationLastRoundGame(Game actualGame) {
         Round lastRoundGame = null;
 
         try {
@@ -30,10 +30,10 @@ public final class MasterMindLogicHelper {
         } catch(Exception ex) {
             throw ex;
         }
-    }
+    }*/
 
-    private static List<KeyPeg> verifyRoundIdFromGame(Game game,
-                                                Integer roundId) {
+    public static List<KeyPeg> verifyGameRoundFromRoundId(Game game,
+                                                           Integer roundId) {
         List<Round> roundList = null;
         List<Ball> rightCombination = null;
         List<KeyPeg> roundKeyPeg = null;
@@ -96,7 +96,7 @@ public final class MasterMindLogicHelper {
             for(int i=0;i< Constants.ROUNDS_NUMBER; i++) {
                 round = new Round();
 
-                round.setId(i+1);
+                round.setId(i);
                 rounds.add(round);
             }
 
