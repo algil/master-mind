@@ -8,17 +8,15 @@ import java.util.List;
  */
 public class Round {
 
-    public static final int NUM_HOLES_ROUND = 4;
-
     private Integer id;
-    private List<Ball> balls;
-    private List<KeyPeg> result;
+    private List<Ball> userBallCombinationSelected;
+    private List<KeyPeg> keyPegRoundResult;
     private RoundState roundState;
 
     public Round() {
         this.id = null;
-        this.balls = new ArrayList<>();
-        this.result = new ArrayList<>();
+        this.userBallCombinationSelected = new ArrayList<>();
+        this.keyPegRoundResult = new ArrayList<>();
         this.roundState = RoundState.Empty;
     }
 
@@ -30,21 +28,21 @@ public class Round {
         return this.id;
     }
 
-    public void addCodePage(Ball ball) {
-        if (isRoundStateFull()) {
-            //TODO: Throw Exception to show a message?
-
-        }
-
-        this.balls.add(ball);
-
-        if (this.balls.size() == NUM_HOLES_ROUND) {
-            this.roundState = RoundState.Full;
-        }
+    public List<Ball> getUserBallCombinationSelected() {
+        return this.userBallCombinationSelected;
     }
 
-    public List<KeyPeg> getResult() {
-        return result;
+    public void addUserBallCombination(Ball selectedBall) {
+        this.userBallCombinationSelected.add(selectedBall);
+    }
+
+
+    public List<KeyPeg> getKeyPegRoundResult() {
+        return keyPegRoundResult;
+    }
+
+    public void setKeyPegRound(List<KeyPeg> keyPegRoundResult) {
+        this.keyPegRoundResult = keyPegRoundResult;
     }
 
     public boolean isRoundStateEmpty() {
