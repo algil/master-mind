@@ -1,6 +1,7 @@
 package es.uma.lcc.riatec6.mastermind.dal;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -35,27 +36,11 @@ public final class MastermindHelper {
         return roundFound;
     }
 
-    /*public static Game verifyRightCombinationLastRoundGame(Game actualGame) {
-        Round lastRoundGame = null;
-
-        try {
-            if (actualGame != null
-                    && actualGame.getRounds() != null) {
-                lastRoundGame = actualGame.getRounds().get(actualGame.getRounds().size() - 1);
-
-                lastRoundGame.setKeyPegRound(verifyRoundIdFromGame(actualGame, lastRoundGame.getNumRound()));
-            }
-
-            return actualGame;
-        } catch(Exception ex) {
-            throw ex;
-        }
-    }*/
-
     public static void resolveRound(Game game, Round round) {
 
         try {
-            Ball[] rightCombination = game.getRightCombination();
+           Ball[] rightCombination = game.getRightCombination();
+           List<Ball> rightCombinationToCheck = new ArrayList<Ball>(Arrays.asList(game.getRightCombination()));
 
             int contBlack = 0;
             int contWhite = 0;
@@ -66,8 +51,11 @@ public final class MastermindHelper {
 
                 if (ball == rightCombination[i]) {
                     contBlack++;
+                    if (rightCombinationToCheck.contains(ball)) {
+                        rightCombinationToCheck.remove(rightCombinationToCheck.indexOf(ball));
+                    }
 
-                } else if (areBallColourInRigthCombination(rightCombination, ball)) {
+                } else if (areBallColourInRigthCombination(rightCombinationToCheck, ball)) {
                     contWhite++;
                 }
             }
@@ -95,7 +83,7 @@ public final class MastermindHelper {
         }
     }
 
-    private static boolean areBallColourInRigthCombination(Ball[] rightCombination,
+    private static boolean areBallColourInRigthCombination(List<Ball> rightCombination,
                                                            Ball ballToCheck) {
         boolean ok = false;
 
