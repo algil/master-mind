@@ -43,6 +43,8 @@ public class MasterMindDAO implements IMasterMindDAO {
             insertValues.put(ConstantsDb.DB_MASTERMIND_TABLE_FIELD_POINTS, record.getPoints());
             insertValues.put(ConstantsDb.DB_MASTERMIND_TABLE_FIELD_REGISTER_DATE, DateUtils.dateToString(record.getRegisterDate()));
 
+            newRowId = (int) sqlLiteDataBase.insert(ConstantsDb.RANKING_TABLE_NAME, null, insertValues);
+
         } catch(Exception ex) {
             Log.e("Error: ", ex.getMessage());
             throw ex;
