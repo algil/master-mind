@@ -1,57 +1,62 @@
 package domain;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by LENOVO on 05/01/2016.
  */
 public class Round {
 
-    private Integer id;
     private int numRound;
-    private List<Ball> userBallCombinationSelected;
-    private List<KeyPeg> keyPegRoundResult;
+    private Ball[] balls;
+    private BallResult[] ballResults;
     private RoundState roundState;
 
-    public Round() {
-        this.id = null;
-        this.userBallCombinationSelected = new ArrayList<>();
-        this.keyPegRoundResult = new ArrayList<>();
+    public Round(int numRound) {
+        this.numRound = numRound;
+        this.balls = new Ball[4];
+        this.ballResults = new BallResult[4];
         this.roundState = RoundState.Empty;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getId() {
-        return this.id;
-    }
-
     public int getNumRound() {
-        return numRound;
+        return this.numRound;
     }
 
-    public void setNumRound(int numRound) {
-        this.numRound = numRound;
+    public Ball[] getBalls() {
+        return this.balls;
     }
 
-    public List<Ball> getUserBallCombinationSelected() {
-        return this.userBallCombinationSelected;
+    public void addBall(Ball ball) {
+        if (balls[0] == null) {
+            balls[0] = ball;
+
+        } else if (balls[1] == null) {
+            balls[1] = ball;
+
+        } else if (balls[2] == null) {
+            balls[2] = ball;
+
+        } else if (balls[3] == null) {
+            balls[3] = ball;
+        }
     }
 
-    public void addUserBallCombination(Ball selectedBall) {
-        this.userBallCombinationSelected.add(selectedBall);
+    public void addBallResult(BallResult ballResult) {
+        if (ballResults[0] == null) {
+            ballResults[0] = ballResult;
+
+        } else if (ballResults[1] == null) {
+            ballResults[1] = ballResult;
+
+        } else if (ballResults[2] == null) {
+            ballResults[2] = ballResult;
+
+        } else if (ballResults[3] == null) {
+            ballResults[3] = ballResult;
+        }
     }
 
-
-    public List<KeyPeg> getKeyPegRoundResult() {
-        return keyPegRoundResult;
-    }
-
-    public void setKeyPegRound(List<KeyPeg> keyPegRoundResult) {
-        this.keyPegRoundResult = keyPegRoundResult;
+    public BallResult[] getBallResults() {
+        return ballResults;
     }
 
     public boolean isRoundStateEmpty() {

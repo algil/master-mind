@@ -11,4 +11,7 @@
     <color name="ballYellow">#FFEB3B</color>
     <color name="ballBrown">#795548</color>
     <color name="ballOrange">#FF5722</color>
+
+    <color name="ballBlack">#000000</color>
+    <color name="ballWhite">#FFFFFF</color>
 </resources>

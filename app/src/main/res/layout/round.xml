@@ -17,7 +17,7 @@
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:id="@+id/imageView5"
+                android:id="@+id/result1"
                 android:src="@drawable/ball"
                 android:tint="#979797"
                 android:background="@android:color/transparent"
@@ -28,7 +28,7 @@
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:id="@+id/imageView6"
+                android:id="@+id/result2"
                 android:src="@drawable/ball"
                 android:tint="#979797"
                 android:background="@android:color/transparent"
@@ -45,7 +45,7 @@
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:id="@+id/imageView7"
+                android:id="@+id/result3"
                 android:src="@drawable/ball"
                 android:tint="#979797"
                 android:background="@android:color/transparent"
@@ -55,7 +55,7 @@
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:id="@+id/imageView8"
+                android:id="@+id/result4"
                 android:src="@drawable/ball"
                 android:tint="#979797"
                 android:background="@android:color/transparent"

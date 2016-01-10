@@ -7,10 +7,11 @@ import java.util.List;
  */
 public class Game {
     private List<Round> rounds;
-    private List<Ball> rightCombination;
+    private Ball[] rightCombination;
 
     public Game() {
         this.rounds = null;
+        rightCombination = new Ball[4];
     }
 
     public void setRounds(List<Round> rounds) {
@@ -21,11 +22,11 @@ public class Game {
         return this.rounds;
     }
 
-    public void setRightCombination(List<Ball> rightCombination) {
+    public void setRightCombination(Ball[] rightCombination) {
         this.rightCombination = rightCombination;
     }
 
-    public List<Ball> getRightCombination() {
+    public Ball[] getRightCombination() {
         return this.rightCombination;
     }
 }

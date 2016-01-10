@@ -1,12 +1,13 @@
 package es.uma.lcc.riatec6.mastermind;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
+import domain.Ball;
+import domain.Game;
 import domain.Round;
 import es.uma.lcc.riatec6.mastermind.adapter.RoundAdapter;
 
@@ -17,10 +18,17 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
     private ListView roundList;
     private RoundAdapter adapter;
 
+    BoardViewModel viewModel;
+
+    private Game game;
+    private Round actualRound;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_board);
+
+        viewModel = new BoardViewModel();
 
         initRoundList();
         setListeners();
@@ -31,10 +39,7 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         adapter = new RoundAdapter(this);
         roundList.setAdapter(adapter);
 
-        Round round = null;
-        for (int i = 1; i <= NUM_ROUNDS; i++) {
-            round = new Round();
-            round.setNumRound(i);
+        for (Round round : viewModel.getRounds()) {
             adapter.insert(round, 0);
         }
     }
@@ -55,34 +60,41 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
         ballOrange.setOnClickListener(this);
     }
 
+    private void ballSelected(Ball ball) {
+        viewModel.addBall(ball);
+        adapter.notifyDataSetChanged();
+    }
+
     @Override
     public void onClick(View view) {
         int id = view.getId();
 
-        String colorBola = "";
+        Ball ball = null;
 
         switch (id) {
             case R.id.ballBlue:
-                colorBola = "Blue";
+                ball = Ball.Blue;
                 break;
             case R.id.ballRed:
-                colorBola = "Red";
+                ball = Ball.Red;
                 break;
             case R.id.ballGreen:
-                colorBola = "Green";
+                ball = Ball.Green;
                 break;
             case R.id.ballYellow:
-                colorBola = "Yellow";
+                ball = Ball.Yellow;
                 break;
             case R.id.ballBrown:
-                colorBola = "Brown";
+                ball = Ball.Brown;
                 break;
             case R.id.ballOrange:
-                colorBola = "Orange";
+                ball = Ball.Orange;
                 break;
             default:
         }
+        if (ball != null) {
+            ballSelected(ball);
+        }
 
-        Log.d("MainActivity", "La bola seleccionada es de color " + colorBola);
     }
 }
