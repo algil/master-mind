@@ -8,13 +8,13 @@ import java.util.Date;
 public class PlayerRecord {
     private Integer id;
     private String name;
-    private Integer points;
+    private Integer score;
     private Date registerDate;
 
     public PlayerRecord() {
         this.id = null;
         this.name = null;
-        this.points = null;
+        this.score = null;
         this.registerDate = null;
     }
 
@@ -34,12 +34,12 @@ public class PlayerRecord {
         return this.name;
     }
 
-    public void setPoints(Integer points) {
-        this.points = points;
+    public void setScore(Integer score) {
+        this.score = score;
     }
 
-    public Integer getPoints() {
-        return this.points;
+    public Integer getScore() {
+        return this.score;
     }
 
     public void setRegisterDate(Date date) {

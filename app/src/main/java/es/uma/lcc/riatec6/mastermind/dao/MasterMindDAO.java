@@ -39,7 +39,7 @@ public class MasterMindDAO implements IMasterMindDAO {
             insertValues = new ContentValues();
 
             insertValues.put(ConstantsDb.DB_MASTERMIND_TABLE_FIELD_PLAYERNAME, record.getName());
-            insertValues.put(ConstantsDb.DB_MASTERMIND_TABLE_FIELD_POINTS, record.getPoints());
+            insertValues.put(ConstantsDb.DB_MASTERMIND_TABLE_FIELD_POINTS, record.getScore());
             insertValues.put(ConstantsDb.DB_MASTERMIND_TABLE_FIELD_REGISTER_DATE, DateUtils.dateToString(record.getRegisterDate()));
 
             newRowId = (int) sqlLiteDataBase.insert(ConstantsDb.RANKING_TABLE_NAME, null, insertValues);
@@ -80,7 +80,7 @@ public class MasterMindDAO implements IMasterMindDAO {
 
                     playerRecord.setId(resultSet.getInt(resultSet.getColumnIndex(ConstantsDb.DB_MASTERMIND_TABLE_FIELD_ID)));
                     playerRecord.setName(resultSet.getString(resultSet.getColumnIndex(ConstantsDb.DB_MASTERMIND_TABLE_FIELD_PLAYERNAME)));
-                    playerRecord.setPoints(resultSet.getInt(resultSet.getColumnIndex(ConstantsDb.DB_MASTERMIND_TABLE_FIELD_POINTS)));
+                    playerRecord.setScore(resultSet.getInt(resultSet.getColumnIndex(ConstantsDb.DB_MASTERMIND_TABLE_FIELD_POINTS)));
                     playerRecord.setRegisterDate(DateUtils.stringToDate(resultSet.getString(resultSet.getColumnIndex(ConstantsDb.DB_MASTERMIND_TABLE_FIELD_REGISTER_DATE))));
 
                     playerRecordList.add(playerRecord);

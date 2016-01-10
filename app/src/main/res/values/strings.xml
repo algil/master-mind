@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">MasterMind</string>
+    <string name="app_name">Mastermind</string>
+    <string name="high_scores">High Scores</string>
+    <string name="board">Board</string>
     <string name="play">Play</string>
     <string name="won_title">You Won!</string>
     <string name="won_description">Congratulations. You won. You may want to add you score to the high scores.</string>
@@ -10,4 +12,6 @@
     <string name="try_again">Try again</string>
     <string name="go_menu">Go to menu</string>
     <string name="enter_your_name">Enter your name</string>
+    <string name="message.error.submit_score">Error to submit score</string>
+    <string name="message.error.high_score">Error to get high score list</string>
 </resources>

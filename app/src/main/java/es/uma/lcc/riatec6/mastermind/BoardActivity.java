@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -11,14 +12,21 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.util.Date;
+
+import es.uma.lcc.riatec6.mastermind.adapter.RoundAdapter;
+import es.uma.lcc.riatec6.mastermind.dal.MasterMindDAL;
 import es.uma.lcc.riatec6.mastermind.domain.Ball;
 import es.uma.lcc.riatec6.mastermind.domain.Game;
+import es.uma.lcc.riatec6.mastermind.domain.PlayerRecord;
 import es.uma.lcc.riatec6.mastermind.domain.Round;
-import es.uma.lcc.riatec6.mastermind.adapter.RoundAdapter;
 import es.uma.lcc.riatec6.mastermind.listener.MastermindListener;
 
 public class BoardActivity extends AppCompatActivity implements View.OnClickListener, MastermindListener {
+
+    private static final String TAG_LOG = "BoardActivity";
 
     private ListView roundList;
     private RoundAdapter adapter;
@@ -44,6 +52,7 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void initDataList() {
+        adapter.clear();
         for (Round round : viewModel.getRounds()) {
             adapter.insert(round, 0);
         }
@@ -186,13 +195,25 @@ public class BoardActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void submitScore(String namePlayer, int score) {
-        //TODO: Guardar la puntuacion
+        try {
+            MasterMindDAL dal = new MasterMindDAL(this);
+            PlayerRecord playerRecord = new PlayerRecord();
+            playerRecord.setName(namePlayer);
+            playerRecord.setScore(score);
+            playerRecord.setRegisterDate(new Date());
 
+            dal.saveNewRakingRecord(playerRecord);
+
+        } catch(Exception ex) {
+            Toast.makeText(this, R.string.message_error_submit_score, Toast.LENGTH_SHORT).show();
+            Log.e(TAG_LOG, ex.getMessage(), ex);
+        }
         finish();
     }
 
     private void newGame() {
         viewModel = new BoardViewModel(this);
         initDataList();
+        roundList.setSelection(roundList.getCount());
     }
 }
