@@ -71,8 +71,8 @@ public class MasterMindDAO implements IMasterMindDAO {
                                               null,
                                               null,
                                               null,
-                                              ConstantsDb.DB_MASTERMIND_TABLE_FIELD_POINTS + " DESC",
-                                              null);
+                                              null,
+                                              ConstantsDb.DB_MASTERMIND_TABLE_FIELD_POINTS + " DESC");
 
             if (resultSet.moveToFirst()) {
                 do {
