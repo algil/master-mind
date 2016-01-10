@@ -15,9 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BoardActivity" android:label="@string/board" />
+        <activity android:name=".BoardActivity" android:label="@string/board"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".HighScoresActivity"
-            android:label="@string/high_scores"></activity>
+            android:label="@string/high_scores" />
     </application>
 
 </manifest>

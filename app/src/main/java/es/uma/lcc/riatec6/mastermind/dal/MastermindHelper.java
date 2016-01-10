@@ -67,8 +67,8 @@ public final class MastermindHelper {
                 round.addBallResult(BallResult.White);
             }
 
-            game.addScore(contBlack * 10 - round.getNumRound());
-            game.addScore(contWhite * 5 - round.getNumRound());
+            game.addScore((contBlack * 10) * (Constants.ROUNDS_NUMBER - round.getNumRound()));
+            game.addScore((contWhite * 5) * (Constants.ROUNDS_NUMBER - round.getNumRound()));
 
             if (contBlack == 4) {
                 game.setGameState(GameState.Won);

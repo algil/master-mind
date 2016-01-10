@@ -3,7 +3,8 @@
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context="es.uma.lcc.riatec6.mastermind.MainActivity">
+tools:context="es.uma.lcc.riatec6.mastermind.MainActivity"
+    android:background="#E0E0E0">
 
 <ListView
     android:layout_width="wrap_content"
