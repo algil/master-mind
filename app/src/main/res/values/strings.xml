@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">MasterMind</string>
     <string name="play">Play</string>
+    <string name="won_title">You Won!</string>
+    <string name="won_description">Congratulations. You won. You may want to add you score to the high scores.</string>
+    <string name="lost_title">You Lost!</string>
+    <string name="lost_description">You didn\'t manage to guess the solution. Try again.</string>
+    <string name="score">Score: %1$d</string>
+    <string name="submit_score">Submit Score</string>
+    <string name="try_again">Try again</string>
+    <string name="go_menu">Go to menu</string>
+    <string name="enter_your_name">Enter your name</string>
 </resources>

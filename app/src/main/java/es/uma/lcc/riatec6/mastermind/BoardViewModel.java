@@ -4,11 +4,12 @@ import android.util.Log;
 
 import java.util.List;
 
-import common.infraestructure.Constants;
 import dal.MastermindHelper;
 import domain.Ball;
 import domain.Game;
+import domain.GameState;
 import domain.Round;
+import es.uma.lcc.riatec6.mastermind.listener.MastermindListener;
 
 /**
  * Created by algil on 10/01/16.
@@ -17,8 +18,11 @@ public class BoardViewModel {
 
     private Game game;
     private Round actualRound;
+    private MastermindListener listener;
 
-    public BoardViewModel() {
+    public BoardViewModel(MastermindListener listener) {
+        this.listener = listener;
+
         try {
             game = MastermindHelper.generateNewGame();
             actualRound = MastermindHelper.getRoundById(game, 1);
@@ -30,22 +34,6 @@ public class BoardViewModel {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public Game getGame() {
-        return game;
-    }
-
-    public void setGame(Game game) {
-        this.game = game;
-    }
-
-    public Round getActualRound() {
-        return actualRound;
-    }
-
-    public void setActualRound(Round actualRound) {
-        this.actualRound = actualRound;
     }
 
     public List<Round> getRounds() {
@@ -61,10 +49,14 @@ public class BoardViewModel {
 
     private void finishRound() {
         MastermindHelper.resolveRound(game, actualRound);
-        if (actualRound.getNumRound() == Constants.ROUNDS_NUMBER) {
-
-        } else {
+        if (game.getGameState() == GameState.Playing) {
             actualRound = MastermindHelper.getRoundById(game, actualRound.getNumRound() + 1);
+
+        } else if (game.getGameState() == GameState.Won) {
+            listener.onGameWon(game);
+
+        } else if (game.getGameState() == GameState.Lost) {
+            listener.onGameLost(game);
         }
     }
 }

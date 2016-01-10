@@ -8,13 +8,11 @@ public class Round {
     private int numRound;
     private Ball[] balls;
     private BallResult[] ballResults;
-    private RoundState roundState;
 
     public Round(int numRound) {
         this.numRound = numRound;
         this.balls = new Ball[4];
         this.ballResults = new BallResult[4];
-        this.roundState = RoundState.Empty;
     }
 
     public int getNumRound() {
@@ -57,17 +55,5 @@ public class Round {
 
     public BallResult[] getBallResults() {
         return ballResults;
-    }
-
-    public boolean isRoundStateEmpty() {
-        return RoundState.Empty == this.roundState;
-    }
-
-    public boolean isRoundStateStarted() {
-        return RoundState.Started == this.roundState;
-    }
-
-    public boolean isRoundStateFull() {
-        return RoundState.Full == this.roundState;
     }
 }

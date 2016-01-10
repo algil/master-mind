@@ -8,10 +8,13 @@ import java.util.List;
 public class Game {
     private List<Round> rounds;
     private Ball[] rightCombination;
+    private int score;
+    private GameState gameState;
 
     public Game() {
         this.rounds = null;
         rightCombination = new Ball[4];
+        gameState = GameState.Playing;
     }
 
     public void setRounds(List<Round> rounds) {
@@ -28,5 +31,21 @@ public class Game {
 
     public Ball[] getRightCombination() {
         return this.rightCombination;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void addScore(int score) {
+        this.score += score;
+    }
+
+    public GameState getGameState() {
+        return gameState;
+    }
+
+    public void setGameState(GameState gameState) {
+        this.gameState = gameState;
     }
 }

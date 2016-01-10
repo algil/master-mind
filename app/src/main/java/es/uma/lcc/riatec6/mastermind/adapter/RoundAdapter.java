@@ -61,10 +61,6 @@ public class RoundAdapter extends ArrayAdapter<Round> {
         return view;
     }
 
-    private int getColor(View view, int id) {
-        return view.getResources().getColor(id);
-    }
-
     private int getColorBall(View view, Ball ball) {
         int colorId = R.color.ballEmpty;
         if (ball != null) {

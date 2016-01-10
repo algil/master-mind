@@ -9,6 +9,7 @@ import common.infraestructure.Constants;
 import domain.Ball;
 import domain.BallResult;
 import domain.Game;
+import domain.GameState;
 import domain.Round;
 
 /**
@@ -78,6 +79,17 @@ public final class MastermindHelper {
                 round.addBallResult(BallResult.White);
             }
 
+            game.addScore(contBlack * 10 - round.getNumRound());
+            game.addScore(contWhite * 5 - round.getNumRound());
+
+            if (contBlack == 4) {
+                game.setGameState(GameState.Won);
+            }
+
+            if (round.getNumRound() == Constants.ROUNDS_NUMBER && contBlack != 4) {
+                game.setGameState(GameState.Lost);
+            }
+
         } catch (Exception ex) {
             throw ex;
         }
@@ -105,7 +117,7 @@ public final class MastermindHelper {
         Round round = null;
 
         try {
-            rounds = new ArrayList<Round>();
+            rounds = new ArrayList<>();
 
             for (int i = 1; i <= Constants.ROUNDS_NUMBER; i++) {
                 round = new Round(i);
@@ -130,30 +142,6 @@ public final class MastermindHelper {
                     rightCombination.add(randomBall);
                 }
             }
-
-//            for (int i = 0; i < 4; i++) {
-//                randomNumber = NumberUtils.calculateRandomNumberBetween1And4();
-//                switch (randomNumber) {
-//                    case 0:
-//                        rightCombination.add(Ball.Blue);
-//                        break;
-//                    case 1:
-//                        rightCombination.add(Ball.Brown);
-//                        break;
-//                    case 2:
-//                        rightCombination.add(Ball.Green);
-//                        break;
-//                    case 3:
-//                        rightCombination.add(Ball.Orange);
-//                        break;
-//                    case 4:
-//                        rightCombination.add(Ball.Red);
-//                        break;
-//                    case 5:
-//                        rightCombination.add(Ball.Yellow);
-//                        break;
-//                }
-//            }
 
             game.setRightCombination(rightCombination.toArray(new Ball[rightCombination.size()]));
             game.setRounds(MastermindHelper.generateRounds());

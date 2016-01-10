@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textTitle"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Title" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:id="@+id/textDescription"
+        android:layout_below="@+id/textScore"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridLayout"
+        android:rowCount="1"
+        android:columnCount="7"
+        android:columnOrderPreserved="false"
+        android:useDefaultMargins="true"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/textDescription"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/ball1"
+            android:src="@drawable/ball"
+            android:layout_gravity="fill_vertical"
+            android:gravity="center|center_horizontal"
+            android:background="@android:color/transparent"
+            android:tint="@color/ballEmpty"
+            android:layout_marginRight="4dp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/ball2"
+            android:src="@drawable/ball"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:tint="@color/ballEmpty" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/ball3"
+            android:src="@drawable/ball"
+            android:gravity="center|center_horizontal"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:tint="@color/ballEmpty" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/ball4"
+            android:src="@drawable/ball"
+            android:gravity="center|center_horizontal"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="4dp"
+            android:tint="@color/ballEmpty" />
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editNamePlayer"
+        android:layout_below="@+id/gridLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:hint="@string/enter_your_name" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Score"
+        android:id="@+id/textScore"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textTitle"
+        android:layout_marginTop="20dp"
+        android:gravity="center" />
+</RelativeLayout>

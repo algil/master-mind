@@ -90,39 +90,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void testPlayRound() {
-
-//        Game game = null;
-//
-//
-//        try {
-//            game = MastermindHelper.generateNewGame();
-//
-//            System.out.println("Correct combination: ");
-//            for (Ball item :game.getRightCombination()) {
-//                System.out.println("Ball: " + item);
-//            }
-//
-//            //Play a round 1
-//
-//
-//            game.getRounds().get(0).addBall(Ball.Yellow);
-//            game.getRounds().get(0).addBall(Ball.Brown);
-//            game.getRounds().get(0).addBall(Ball.Blue);
-//            game.getRounds().get(0).addBall(Ball.Orange);
-//
-//            //Verify round 1
-//            game.getRounds().get(0).setKeyPegRound(MastermindHelper.resolveRound(game, 0));
-//
-//            //View Round BallResult result
-//            System.out.println("BallResult result:");
-//            for (BallResult item : game.getRounds().get(0).getBallResults()) {
-//                System.out.println("BallResult: " + String.valueOf(item));
-//            }
-//
-//
-//        } catch(Exception ex) {
-//            Log.wtf("Error", ex);
-//        }
-    }
 }
