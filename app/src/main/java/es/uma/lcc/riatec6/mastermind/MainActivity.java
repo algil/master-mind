@@ -3,20 +3,13 @@ package es.uma.lcc.riatec6.mastermind;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-
-import java.util.Date;
-import java.util.List;
-
-import es.uma.lcc.riatec6.mastermind.common.DateUtils;
-import es.uma.lcc.riatec6.mastermind.dal.MasterMindDAL;
-import es.uma.lcc.riatec6.mastermind.domain.PlayerRecord;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button btnPlay;
+    private Button btnHighScores;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,62 +25,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //testPlayRound();
-        //testSavePlayerRanking();
-        //testLoadPlayerRanking();
-    }
-
-    private void testSavePlayerRanking() {
-        MasterMindDAL dal = null;
-        PlayerRecord playerRecord = null;
-
-        try {
-            dal = new MasterMindDAL(this);
-            playerRecord = new PlayerRecord();
-            playerRecord.setName("Antonio");
-            playerRecord.setPoints(200);
-            playerRecord.setRegisterDate(new Date());
-
-            dal.saveNewRakingRecord(playerRecord);
-
-            playerRecord = new PlayerRecord();
-            playerRecord.setName("Tomi");
-            playerRecord.setPoints(200);
-            playerRecord.setRegisterDate(new Date());
-
-            dal.saveNewRakingRecord(playerRecord);
-
-        } catch(Exception ex) {
-            Log.wtf("Error", ex);
-            throw ex;
-        }
-    }
-
-    private void testLoadPlayerRanking() {
-        MasterMindDAL dal = null;
-        List<PlayerRecord> rankingRecordList = null;
-
-        try {
-            dal = new MasterMindDAL(this);
-
-            rankingRecordList = dal.getRankingRecords();
-
-            if (rankingRecordList != null) {
-                System.out.println("Ranking record List:");
-                for (PlayerRecord record : rankingRecordList) {
-                    System.out.println("ID: " + record.getId());
-                    System.out.println("NAME: " + record.getName());
-                    System.out.println("POINTS: " + record.getPoints());
-                    System.out.println("REGISTER DATE: " + DateUtils.dateToString(record.getRegisterDate()));
-                    System.out.println("------------------------");
-                }
+        btnHighScores = (Button) findViewById(R.id.btnHighScores);
+        btnHighScores.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, HighScoresActivity.class);
+                startActivity(intent);
             }
-
-        } catch(Exception ex) {
-            Log.wtf("Error", ex);
-            throw ex;
-        }
+        });
     }
-
-
 }
