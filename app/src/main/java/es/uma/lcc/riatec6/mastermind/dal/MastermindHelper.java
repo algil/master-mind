@@ -1,16 +1,16 @@
-package dal;
+package es.uma.lcc.riatec6.mastermind.dal;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import common.infraestructure.Constants;
-import domain.Ball;
-import domain.BallResult;
-import domain.Game;
-import domain.GameState;
-import domain.Round;
+import es.uma.lcc.riatec6.mastermind.common.infraestructure.Constants;
+import es.uma.lcc.riatec6.mastermind.domain.Ball;
+import es.uma.lcc.riatec6.mastermind.domain.BallResult;
+import es.uma.lcc.riatec6.mastermind.domain.Game;
+import es.uma.lcc.riatec6.mastermind.domain.GameState;
+import es.uma.lcc.riatec6.mastermind.domain.Round;
 
 /**
  * Created by LENOVO on 09/01/2016.

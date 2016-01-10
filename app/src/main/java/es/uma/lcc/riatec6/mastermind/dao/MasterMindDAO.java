@@ -1,4 +1,4 @@
-package dao;
+package es.uma.lcc.riatec6.mastermind.dao;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -8,13 +8,12 @@ import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
-import common.DateUtils;
-import dao.constants.ConstantsDb;
-import dao.helpers.MasterMindDAOhelper;
-import dao.interfaces.IMasterMindDAO;
-import domain.PlayerRecord;
+import es.uma.lcc.riatec6.mastermind.common.DateUtils;
+import es.uma.lcc.riatec6.mastermind.dao.constants.ConstantsDb;
+import es.uma.lcc.riatec6.mastermind.dao.helpers.MasterMindDAOhelper;
+import es.uma.lcc.riatec6.mastermind.dao.interfaces.IMasterMindDAO;
+import es.uma.lcc.riatec6.mastermind.domain.PlayerRecord;
 
 /**
  * Created by LENOVO on 04/01/2016.

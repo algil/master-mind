@@ -1,4 +1,4 @@
-package dao.constants;
+package es.uma.lcc.riatec6.mastermind.dao.constants;
 
 /**
  * Created by LENOVO on 04/01/2016.

@@ -9,9 +9,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import domain.Ball;
-import domain.BallResult;
-import domain.Round;
+import es.uma.lcc.riatec6.mastermind.domain.Ball;
+import es.uma.lcc.riatec6.mastermind.domain.BallResult;
+import es.uma.lcc.riatec6.mastermind.domain.Round;
 import es.uma.lcc.riatec6.mastermind.R;
 
 /**

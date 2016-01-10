@@ -1,4 +1,4 @@
-package domain;
+package es.uma.lcc.riatec6.mastermind.domain;
 
 import java.util.Date;
 

@@ -1,6 +1,6 @@
 package es.uma.lcc.riatec6.mastermind.listener;
 
-import domain.Game;
+import es.uma.lcc.riatec6.mastermind.domain.Game;
 
 /**
  * Created by algil on 10/01/16.

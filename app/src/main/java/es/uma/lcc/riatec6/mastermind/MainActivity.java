@@ -10,9 +10,9 @@ import android.widget.Button;
 import java.util.Date;
 import java.util.List;
 
-import common.DateUtils;
-import dal.MasterMindDAL;
-import domain.PlayerRecord;
+import es.uma.lcc.riatec6.mastermind.common.DateUtils;
+import es.uma.lcc.riatec6.mastermind.dal.MasterMindDAL;
+import es.uma.lcc.riatec6.mastermind.domain.PlayerRecord;
 
 public class MainActivity extends AppCompatActivity {
 

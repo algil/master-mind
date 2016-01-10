@@ -1,4 +1,4 @@
-package domain;
+package es.uma.lcc.riatec6.mastermind.domain;
 
 /**
  * Created by algil on 10/01/16.

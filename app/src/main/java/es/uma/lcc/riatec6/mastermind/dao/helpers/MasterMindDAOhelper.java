@@ -1,10 +1,10 @@
-package dao.helpers;
+package es.uma.lcc.riatec6.mastermind.dao.helpers;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import dao.constants.ConstantsDb;
+import es.uma.lcc.riatec6.mastermind.dao.constants.ConstantsDb;
 
 /**
  * Created by LENOVO on 04/01/2016.

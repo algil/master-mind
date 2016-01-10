@@ -12,9 +12,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import domain.Ball;
-import domain.Game;
-import domain.Round;
+import es.uma.lcc.riatec6.mastermind.domain.Ball;
+import es.uma.lcc.riatec6.mastermind.domain.Game;
+import es.uma.lcc.riatec6.mastermind.domain.Round;
 import es.uma.lcc.riatec6.mastermind.adapter.RoundAdapter;
 import es.uma.lcc.riatec6.mastermind.listener.MastermindListener;
 

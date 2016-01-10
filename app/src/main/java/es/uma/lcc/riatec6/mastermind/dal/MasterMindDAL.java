@@ -1,15 +1,13 @@
-package dal;
+package es.uma.lcc.riatec6.mastermind.dal;
 
 import android.content.Context;
 import android.util.Log;
 
 import java.util.List;
 
-import api.IMasterMindDAL;
-import dao.MasterMindDAO;
-import domain.Game;
-import domain.PlayerRecord;
-import domain.Round;
+import es.uma.lcc.riatec6.mastermind.api.IMasterMindDAL;
+import es.uma.lcc.riatec6.mastermind.dao.MasterMindDAO;
+import es.uma.lcc.riatec6.mastermind.domain.PlayerRecord;
 
 /**
  * Created by LENOVO on 04/01/2016.

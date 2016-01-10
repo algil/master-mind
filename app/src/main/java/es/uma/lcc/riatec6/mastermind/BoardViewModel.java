@@ -4,11 +4,11 @@ import android.util.Log;
 
 import java.util.List;
 
-import dal.MastermindHelper;
-import domain.Ball;
-import domain.Game;
-import domain.GameState;
-import domain.Round;
+import es.uma.lcc.riatec6.mastermind.dal.MastermindHelper;
+import es.uma.lcc.riatec6.mastermind.domain.Ball;
+import es.uma.lcc.riatec6.mastermind.domain.Game;
+import es.uma.lcc.riatec6.mastermind.domain.GameState;
+import es.uma.lcc.riatec6.mastermind.domain.Round;
 import es.uma.lcc.riatec6.mastermind.listener.MastermindListener;
 
 /**

@@ -1,4 +1,4 @@
-package common;
+package es.uma.lcc.riatec6.mastermind.common;
 
 import android.util.Log;
 

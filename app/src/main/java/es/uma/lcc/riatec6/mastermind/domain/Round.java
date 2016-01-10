@@ -1,4 +1,4 @@
-package domain;
+package es.uma.lcc.riatec6.mastermind.domain;
 
 /**
  * Created by LENOVO on 05/01/2016.
