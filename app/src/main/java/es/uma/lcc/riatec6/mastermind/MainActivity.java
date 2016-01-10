@@ -1,8 +1,11 @@
 package es.uma.lcc.riatec6.mastermind;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.Date;
 import java.util.List;
@@ -14,14 +17,24 @@ import domain.Ball;
 import domain.Game;
 import domain.KeyPeg;
 import domain.PlayerRecord;
-import domain.Round;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Button btnPlay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btnPlay = (Button) findViewById(R.id.btnPlay);
+        btnPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, BoardActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //testPlayRound();
         //testSavePlayerRanking();

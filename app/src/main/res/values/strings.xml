@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">MasterMind</string>
-    <string name="newGame">New Game</string>
+    <string name="play">Play</string>
 </resources>
