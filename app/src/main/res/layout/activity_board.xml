@@ -4,7 +4,7 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context="es.uma.lcc.riatec6.mastermind.MainActivity"
-    android:background="#E0E0E0">
+    android:background="#607D8B">
 
 <ListView
     android:layout_width="wrap_content"
@@ -12,7 +12,9 @@ tools:context="es.uma.lcc.riatec6.mastermind.MainActivity"
     android:id="@+id/roundList"
     android:layout_alignParentTop="true"
     android:layout_above="@+id/gridLayout"
-    android:stackFromBottom="true" />
+    android:stackFromBottom="true"
+    android:dividerHeight="0.5dp"
+    android:divider="@color/boardElements" />
 
 <LinearLayout
     android:layout_width="match_parent"

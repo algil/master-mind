@@ -4,10 +4,13 @@
     android:layout_height="match_parent">
 
     <TableLayout
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:stretchColumns="0,1"
-        android:id="@+id/tableLayout">
+        android:id="@+id/tableLayout"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp">
 
         <TableRow
             android:layout_width="fill_parent"
@@ -19,7 +22,7 @@
                 android:layout_height="fill_parent"
                 android:id="@+id/result1"
                 android:src="@drawable/ball"
-                android:tint="#979797"
+                android:tint="@color/ballEmpty"
                 android:background="@android:color/transparent"
                 android:padding="2dp"
                 android:cropToPadding="false"
@@ -30,7 +33,7 @@
                 android:layout_height="fill_parent"
                 android:id="@+id/result2"
                 android:src="@drawable/ball"
-                android:tint="#979797"
+                android:tint="@color/ballEmpty"
                 android:background="@android:color/transparent"
                 android:padding="2dp"
                 android:cropToPadding="false"
@@ -47,7 +50,7 @@
                 android:layout_height="fill_parent"
                 android:id="@+id/result3"
                 android:src="@drawable/ball"
-                android:tint="#979797"
+                android:tint="@color/ballEmpty"
                 android:background="@android:color/transparent"
                 android:padding="2dp"
                 android:layout_margin="2dp" />
@@ -57,7 +60,7 @@
                 android:layout_height="fill_parent"
                 android:id="@+id/result4"
                 android:src="@drawable/ball"
-                android:tint="#979797"
+                android:tint="@color/ballEmpty"
                 android:background="@android:color/transparent"
                 android:padding="2dp"
                 android:layout_margin="2dp" />
@@ -66,7 +69,7 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:id="@+id/gridLayout"
         android:rowCount="1"
         android:columnCount="7"
@@ -77,11 +80,13 @@
         android:layout_toLeftOf="@+id/numRound"
         android:layout_toRightOf="@+id/tableLayout"
         android:layout_toEndOf="@+id/tableLayout"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
 
         <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:id="@+id/hole1"
 
             android:background="@android:color/transparent"
@@ -91,8 +96,8 @@
             android:src="@drawable/ball" />
 
         <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:id="@+id/hole2"
             android:background="@android:color/transparent"
             android:tint="@color/ballEmpty"
@@ -101,8 +106,8 @@
             android:src="@drawable/ball" />
 
         <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:id="@+id/hole3"
             android:background="@android:color/transparent"
             android:tint="@color/ballEmpty"
@@ -111,8 +116,8 @@
             android:src="@drawable/ball" />
 
         <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:id="@+id/hole4"
             android:background="@android:color/transparent"
             android:tint="@color/ballEmpty"
@@ -123,9 +128,14 @@
     </LinearLayout>
 
     <TextView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/numRound"
-        android:gravity="center" />
+        android:gravity="center"
+        android:text="1"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="4dp"
+        android:textColor="@android:color/white" />
 </LinearLayout>

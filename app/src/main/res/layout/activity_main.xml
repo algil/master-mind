@@ -7,23 +7,66 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="es.uma.lcc.riatec6.mastermind.MainActivity">
+    tools:context="es.uma.lcc.riatec6.mastermind.MainActivity"
+    android:background="@color/colorPrimary">
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/play"
         android:id="@+id/btnPlay"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="179dp" />
+        android:layout_marginTop="125dp"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="false"
+        android:layout_centerInParent="true"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/high_scores"
         android:id="@+id/btnHighScores"
         android:layout_below="@+id/btnPlay"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_centerInParent="true"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/authors"
+        android:id="@+id/textView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/create_by"
+        android:id="@+id/textView2"
+        android:layout_above="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/app_name"
+        android:id="@+id/textView3"
+        android:layout_above="@+id/btnPlay"
+        android:layout_centerHorizontal="true"
+        android:textSize="48sp"
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>

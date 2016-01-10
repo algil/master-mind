@@ -14,4 +14,6 @@
     <string name="enter_your_name">Enter your name</string>
     <string name="message.error.submit_score">Error to submit score</string>
     <string name="message.error.high_score">Error to get high score list</string>
+    <string name="create_by">Created by:</string>
+    <string name="authors">Antonio Luis Gil &amp; Tomás Ortega</string>
 </resources>
