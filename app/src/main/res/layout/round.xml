@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:stretchColumns="0,1"
+        android:id="@+id/tableLayout">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/imageView5"
+                android:src="@drawable/ball"
+                android:tint="#979797"
+                android:background="@android:color/transparent"
+                android:padding="2dp"
+                android:cropToPadding="false"
+                android:layout_margin="2dp" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/imageView6"
+                android:src="@drawable/ball"
+                android:tint="#979797"
+                android:background="@android:color/transparent"
+                android:padding="2dp"
+                android:cropToPadding="false"
+                android:layout_margin="2dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/imageView7"
+                android:src="@drawable/ball"
+                android:tint="#979797"
+                android:background="@android:color/transparent"
+                android:padding="2dp"
+                android:layout_margin="2dp" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/imageView8"
+                android:src="@drawable/ball"
+                android:tint="#979797"
+                android:background="@android:color/transparent"
+                android:padding="2dp"
+                android:layout_margin="2dp" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/gridLayout"
+        android:rowCount="1"
+        android:columnCount="7"
+        android:columnOrderPreserved="false"
+        android:useDefaultMargins="true"
+        android:gravity="center|center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/numRound"
+        android:layout_toRightOf="@+id/tableLayout"
+        android:layout_toEndOf="@+id/tableLayout"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/hole1"
+
+            android:background="@android:color/transparent"
+            android:tint="@color/ballEmpty"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:src="@drawable/ball" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/hole2"
+            android:background="@android:color/transparent"
+            android:tint="@color/ballEmpty"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:src="@drawable/ball" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/hole3"
+            android:background="@android:color/transparent"
+            android:tint="@color/ballEmpty"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:src="@drawable/ball" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/hole4"
+            android:background="@android:color/transparent"
+            android:tint="@color/ballEmpty"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:src="@drawable/ball" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/numRound"
+        android:gravity="center" />
+</LinearLayout>

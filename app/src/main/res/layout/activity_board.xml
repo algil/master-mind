@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="es.uma.lcc.riatec6.mastermind.MainActivity">
+
+<ListView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/roundList"
+    android:layout_alignParentTop="true"
+    android:layout_above="@+id/gridLayout"
+    android:stackFromBottom="true" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/gridLayout"
+    android:rowCount="1"
+    android:columnCount="7"
+    android:layout_alignParentTop="false"
+    android:columnOrderPreserved="false"
+    android:useDefaultMargins="true"
+    android:gravity="center_horizontal"
+    android:layout_alignParentBottom="true"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:elevation="10dp">
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/ballBlue"
+        android:src="@drawable/ball"
+        android:layout_gravity="fill_vertical"
+        android:gravity="center|center_horizontal"
+        android:background="@android:color/transparent"
+        android:tint="@color/ballBlue"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/ballRed"
+        android:src="@drawable/ball"
+        android:background="@android:color/transparent"
+        android:tint="@color/ballRed"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/ballGreen"
+        android:src="@drawable/ball"
+        android:gravity="center|center_horizontal"
+        android:background="@android:color/transparent"
+        android:tint="@color/ballGreen"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/ballYellow"
+        android:src="@drawable/ball"
+        android:gravity="center|center_horizontal"
+        android:background="@android:color/transparent"
+        android:tint="@color/ballYellow"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/ballBrown"
+        android:src="@drawable/ball"
+        android:gravity="center|center_horizontal"
+        android:background="@android:color/transparent"
+        android:tint="@color/ballBrown"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/ballOrange"
+        android:src="@drawable/ball"
+        android:gravity="center|center_horizontal"
+        android:background="@android:color/transparent"
+        android:tint="@color/ballOrange"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp" />
+</LinearLayout>
+
+</RelativeLayout>

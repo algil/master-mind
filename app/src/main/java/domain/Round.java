@@ -9,6 +9,7 @@ import java.util.List;
 public class Round {
 
     private Integer id;
+    private int numRound;
     private List<Ball> userBallCombinationSelected;
     private List<KeyPeg> keyPegRoundResult;
     private RoundState roundState;
@@ -26,6 +27,14 @@ public class Round {
 
     public Integer getId() {
         return this.id;
+    }
+
+    public int getNumRound() {
+        return numRound;
+    }
+
+    public void setNumRound(int numRound) {
+        this.numRound = numRound;
     }
 
     public List<Ball> getUserBallCombinationSelected() {

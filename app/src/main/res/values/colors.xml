@@ -3,4 +3,12 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="ballEmpty">#979797</color>
+    <color name="ballBlue">#3F51B5</color>
+    <color name="ballRed">#d32f2f</color>
+    <color name="ballGreen">#4CAF50</color>
+    <color name="ballYellow">#FFEB3B</color>
+    <color name="ballBrown">#795548</color>
+    <color name="ballOrange">#FF5722</color>
 </resources>
